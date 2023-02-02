@@ -1341,6 +1341,7 @@ function Rule_Policy(content) { //增加、替换 policy
     var RuleK1 = ["host", "domain", "ip-cidr", "geoip", "user-agent", "ip6-cidr", "ip-asn"];
     const RuleCheck = (item) => cnt[0].trim().toLowerCase().indexOf(item) == 0; //无视注释行
     const RuleCheck1 = (item) => cnt[0].trim().toLowerCase().indexOf(item) == 0 ; //无视 quanx 不支持的规则类别&排除 hostname
+    console.log("RuleCheck", RuleCheck);
     if (RuleK1.some(RuleCheck1) && !RuleK.some(RuleCheck) ) {
         if (cnt.length == 3 && cnt.indexOf("no-resolve") == -1) {
             ply0 = Ppolicy != "Shawn" ? Ppolicy : cnt[2]
